@@ -23,7 +23,7 @@ Test automation whit serenity Rest, Apis request with the different types of met
 Automation was developed with:
 - Java - Programming language.
 - BDD - Development Strategy
-- - Serenity Rest - For API testing
+- Serenity Rest - For API testing
 - Screenplay - architecture
 - Maven - Dependency Manager
 - Cucumber - Framework to automate BDD tests
