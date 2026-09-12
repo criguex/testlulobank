@@ -1,0 +1,9 @@
+*.class
+*.jar
+*.war
+target/
+.idea/
+*.iml
+.DS_Store
+karate.log
+*.log

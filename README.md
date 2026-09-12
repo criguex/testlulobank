@@ -1,34 +1,58 @@
-# **Test lulo bank - Test automation**
+# Digital Banking API Tests — Karate + Serenity REST
 
-## Project description. 📖
-Test automation whit serenity Rest, Apis request with the different types of methods (get, post, delete) and screenplay architecture
+![Java](https://img.shields.io/badge/Java-11+-ED8B00?logo=openjdk&logoColor=white)
+![Karate](https://img.shields.io/badge/Karate-DSL-1BA1F2?logo=java&logoColor=white)
+![Serenity](https://img.shields.io/badge/Serenity-BDD-blue)
+![Maven](https://img.shields.io/badge/Maven-Build-C71A36?logo=apache-maven&logoColor=white)
 
+API test automation suite for a digital banking platform built with **Karate DSL**, **Serenity REST**, and the **Screenplay Pattern**. Covers full user lifecycle: create, read, and delete operations across isolated test runners.
 
-## pre requirements 📋
-- Java version "1.8" 
-- IntelliJ IDEA  or Eclipse IDE
-- Maven compiler version 3.8.1
-- Cucumber
+## Test Coverage
 
+| Feature | Endpoint | Method | Description |
+|---|---|---|---|
+| `createuser.feature` | `/users` | POST | Create new user account with required fields |
+| `readuser.feature` | `/users/:id` | GET | Retrieve user by ID and validate response schema |
+| `readusers.feature` | `/users` | GET | List all users and validate collection response |
+| `deleteuser.feature` | `/users/:id` | DELETE | Delete user by ID and confirm 204/200 response |
 
-## Installation and execution. 🛠️🔩
-- Cloning the project of the repository 
-- Select the archive pom.xml and update the dependency versions
-- then enter the package test testlulobank\src\test\java\co\com\testlulobank\runner
+## Project Structure
 
-  NOTE: Each test has a different runner, if you want to run a test you must select the appropriated runner
-- after that selec the runner file and run to start the automation
+```
+src/test/java/co/com/testlulobank/
+├── features/
+│   ├── createuser.feature
+│   ├── readuser.feature
+│   ├── readusers.feature
+│   └── deleteuser.feature
+└── runner/
+    └── [individual runners per feature]
+```
 
-##Built with 👨🏻‍💻
-Automation was developed with:
-- Java - Programming language.
-- BDD - Development Strategy
-- Serenity Rest - For API testing
-- Screenplay - architecture
-- Maven - Dependency Manager
-- Cucumber - Framework to automate BDD tests
-- Serenity BDD - Open source library for report generation
+## Tech Stack
 
+| Tool | Purpose |
+|---|---|
+| Java 11+ | Runtime |
+| Maven | Build & dependency management |
+| Karate DSL | API test scenarios |
+| Serenity REST | Extended reporting + REST assertions |
+| Serenity BDD | HTML report generation |
+| Cucumber | BDD framework |
 
-## Autor ✒️👨🏻‍
-**©️ Cristian Guerra** - *Creación de proyecto.* - [criguex@gmail.com](#criguex)
+## Getting Started
+
+```bash
+git clone https://github.com/criguex/testlulobank.git
+cd testlulobank
+mvn clean test
+```
+
+Each feature has its own dedicated runner class — to run a specific flow:
+1. Open the project in IntelliJ IDEA or Eclipse
+2. Navigate to `src/test/java/co/com/testlulobank/runner/`
+3. Run the desired runner class
+
+## License
+
+MIT
